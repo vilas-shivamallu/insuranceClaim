@@ -1,0 +1,125 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background:  linear-gradient(90deg, #eb3349 0%, #F45C43 50%, rgba(252,176,69,1) 100%);
+    color: rgb(255, 250, 250);
+}
+nav{
+  
+    background-color:rgba(15, 27, 14, 0.753);
+    height: 100%;
+    overflow: hidden;
+
+}
+
+nav a {
+    display: block;
+    padding : 14px 10px;
+    text-align: center;
+    color: white;
+    float: left;
+
+}
+nav a:hover{
+    background-color: black;
+
+}
+header{
+    background: #141b22b7;
+        margin : 10px 0px 10px 0px;
+    padding: 30px;
+    text-align: center;
+}
+.card{
+    background-color: rgba(27, 27, 50, 0.8);
+    margin: 10px;
+    padding: 10px;
+}
+.card:hover{
+    
+    box-shadow: 0px 5px 5px 0px gray;
+    border: solid salmon;
+}
+.row:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.col-left{
+    float: left;
+    width: 25%;
+}
+
+.col-right{
+    float: left;
+    width: 75%;
+}
+.fakeimg {
+    background-color: #aaa;
+    width: inherit;
+    padding: 20px;
+  }
+
+footer{
+    background: linear-gradient(90deg, #d6883f 0%,#b3462b 100%);
+    margin : 10px 0px 10px 0px;
+    padding: 30px;
+    text-align: center;
+}
+@media screen and (max-width: 600px){
+    .col-left, .col-right{
+        width: 100%;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 400px){
+    nav a{
+        float: none;
+        width: 100%;
+    }
+}
+cases{
+  display:table;
+}
+.cases label{
+  margin-left: 30px;
+  font-size: 20px;
+  width: 20%;
+  color: aliceblue;
+  float: left;
+  
+}   
+.cases progress{
+  width: 70%;
+  height: 30px;
+ 
+}
+.bottom{
+    display: block;
+    padding : 14px 10px;
+    text-align: center;
+    color: white;
+     background-color:rgba(15, 27, 14, 0.753);
+         
+}
+
+.contact-form input:not([type="submit"]), .contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px dashed black;
+ }
+.contact-form textarea {
+ 
+  min-height: 150px;
+  margin-bottom: 20px; }
+
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: lightgreen;
+    color: black;
+    border-radius: 2px;
+    cursor: pointer;
+  }

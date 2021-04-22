@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <style>
+            body {
+                font-family: "Sofia";
+
+            }
+        </style>
+        <script>
+              var data;
+              var callAPI = (mobileNumber) => {
+              var myHeaders = new Headers();
+              myHeaders.append("Content-Type", "application/json");
+              var raw = JSON.stringify({ "mobileNumber": mobileNumber });
+              var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+              };
+              document.getElementById("data").innerHTML = '';
+              fetch("https://xx7pxmzn4a.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+                .then(response => response.text())
+                .then(result => { $(".data").html(JSON.parse(result).body); 
+                  var myObj = JSON.parse(JSON.parse(result).body);
+                  var x;
+                  for (x in myObj) {
+                  document.getElementById("data").innerHTML += x + ' - ' + myObj[x] + "<br>";
+                  }
+                })
+                  .catch(error => console.log('error', error));
+                }
+          </script>
+    </head>
+    <body>
+      <p onclick="window.location.href='../index.html'" style="cursor: pointer;"><img src="../assets/left-arrow.svg" style="width:4%;height:4%;"></p> 
+      <div class="container">
+        <h1>Check the customer details</h1>
+        <label >Enter Your Mobile Number: </label>
+        <input type="text" id="mobileNumber" class="form-control" placeholder="Mobile Number" required />
+        <button type="button" class ="submit-button"
+                        onclick="callAPI(document.getElementById('mobileNumber').value)">search</button>
+        <div id="data" style="border: 2px dashed white; padding: 8px; margin: 10px;"></div>
+        </div>
+    </body>

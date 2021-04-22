@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>Insurance</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        body {
+          font-family: "Sofia";
+          
+        }
+    </style>
+     <script>
+        var callAPI = (firstName, lastName, email, mobileNumber, policyType, brand, fuelType, engineCapacity) => {
+          var myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json");
+          var raw = JSON.stringify({
+                "firstName": firstName,
+                "lastName": lastName,
+                "email": email,
+                "mobileNumber": mobileNumber,
+                "policyType": policyType,
+                "brand": brand,
+                "fuelType": fuelType,
+                "engineCapacity": engineCapacity
+            });
+          var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+          };
+          fetch("https://bl01y6bidi.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+      </script>
+</head>
+
+<body>
+    <p onclick="window.location.href='../index.html'"><img src="../assets/left-arrow.svg" style="width:4%; height:4%;"></p>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">New Policy Registration</h1>
+            <p id="description" class="description text-center">
+                Enter the details below..
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">First Name</label>
+                <input type="text" name="name" id="fname" class="form-control" placeholder="Enter your first name" required />
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="name">Last Name</label>
+                <input type="text" name="name" id="lname" class="form-control" placeholder="Enter your last name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                    required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="mobile-number">Mobile number</label>
+                <input type="number" name="mobile-number" id="mobile_number" min="1234567890" max="9999999999" class="form-control" placeholder="Enter your mobile-number" />
+            </div>
+            <div class="form-group">
+                <p>Type of policy</p>
+                <select id="policyType" name="role" class="form-control" required>
+                    <option disabled selected value="NA">Select Type of policy</option>
+                    <option value="Comprehensive">Comprehensive</option>
+                    <option value="third-party">Third party</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What is the brand of your vehicle</p>
+                <select id="brand" class="form-control" required>
+                    <option disabled selected value="NA">Select an option</option>
+                    <option value="BMW">BMW</option>
+                    <option value="volkswagen">volkswagen</option>
+                    <option value="audi">audi</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Fuel Type</p>
+                <select id="fuelType" class="form-control" required>
+                    <option disabled selected value="NA">Select Fuel Type</option>
+                    <option value="CNG">Compressed Natural Gas</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Engine Capacity</p>
+                <select id="engineCapacity" class="form-control" required>
+                    <option disabled selected value="NA">Select an option</option>
+                    <option value="1000CC">1000CC</option>
+                    <option value="1000CC-1500CC">1000CC-1500CC</option>
+                    <option value="1500CC-1800CC">1500CC-1800CC</option>
+                    <option value="1800CC-2500CC">1800CC-2500CC</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                    <button type="button" class ="submit-button"
+                    onclick="callAPI(((document.getElementById('fname')||{}).value)|| '',
+                    ((document.getElementById('lname')||{}).value)|| '',
+                    ((document.getElementById('email')||{}).value)|| '',
+                    ((document.getElementById('mobile_number')||{}).value)|| '',
+                    ((document.getElementById('policyType').options[document.getElementById('policyType').selectedIndex]||{}).value)|| '',
+                    ((document.getElementById('brand').options[document.getElementById('brand').selectedIndex]||{}).value)|| '',
+                    ((document.getElementById('fuelType').options[document.getElementById('fuelType').selectedIndex]||{}).value)|| '',
+                    ((document.getElementById('engineCapacity').options[document.getElementById('engineCapacity').selectedIndex]||{}).value)|| '')">send</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

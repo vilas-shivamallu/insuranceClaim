@@ -1,0 +1,23 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body{
+      background:  linear-gradient(90deg, #eb3349 0%, #F45C43 50%, rgba(252,176,69,1) 100%);
+      color: rgb(255, 250, 250);
+      font-family: "Sofia";
+  }
+  .container {
+      margin: 0 auto;
+      width: 430px; 
+      background-color: rgba(27, 27, 50, 0.8);
+      padding: 50px;
+      position: relative;
+    border-radius: 8px;
+  }
+  
+  .submit-button {
+    background: lightgreen;
+    color: black;
+    border-radius: 2px;
+    cursor: pointer;
+  }
