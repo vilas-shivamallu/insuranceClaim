@@ -1,5 +1,4 @@
-# SA_Assignment
-Progressive Insurance – Claim system 
+# Progressive Insurance – Claim system 
 
 (slightly modified from the original) 
 
