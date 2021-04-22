@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Insurance Calculator</title>
+  <link rel="stylesheet" type="text/css" href="CarInsuranceCalculator.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="CarInsuranceCalc.js"></script>
+</head>
+<body>
+  <p onclick="window.location.href='../index.html'"><img src="../assets/left-arrow.svg" style="width:4%; height:4%;"></p>
+  <div class="container">
+    <header>Car Damage Amount Calculator</header>
+    <ul>    
+      <li><label>Paint :</label>
+        <select id="paint">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="200">10% to 20%</option>
+          <option value="500">20% to 50%</option>
+          <option value="1000">50% to 80%</option>
+          <option value="2000">>80%</option>
+        </select>
+      </li>
+      <li><label>Front Bumper :</label>
+        <select id="bumper">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="200">10% to 20%</option>
+          <option value="800">20% to 50%</option>
+          <option value="1000">50% to 80%</option>
+          <option value="2000">>80%</option>
+        </select>
+      </li>
+      <li><label>Hood :</label>
+        <select id="hood">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="500">10% to 20%</option>
+          <option value="100">20% to 50%</option>
+          <option value="2000">50% to 80%</option>
+          <option value="5000">>80%</option>
+        </select>
+      </li>
+      <li><label>Fender :</label>
+        <select id="fender">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="500">10% to 20%</option>
+          <option value="800">20% to 50%</option>
+          <option value="1500">50% to 80%</option>
+          <option value="2000">>80%</option>
+        </select>
+      </li>
+      <li><label>Roof :</label>
+        <select id="roof">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="200">10% to 20%</option>
+          <option value="500">20% to 50%</option>
+          <option value="2000">50% to 80%</option>
+          <option value="5000">>80%</option>
+        </select>
+      </li>
+      <li><label>Front Door :</label>
+        <select id="fdoor">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="500">10% to 20%</option>
+          <option value="1000">20% to 50%</option>
+          <option value="5000">50% to 80%</option>
+          <option value="8000">>80%</option>
+        </select>
+      </li>
+      <li><label>Back Door :</label>
+        <select id="bdoor">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="500">10% to 20%</option>
+          <option value="100">20% to 50%</option>
+          <option value="5000">50% to 80%</option>
+          <option value="8000">>80%</option>
+        </select>
+      </li>
+      <li><label>Trunk :</label>
+        <select id="trunk">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="500">10% to 20%</option>
+          <option value="800">20% to 50%</option>
+          <option value="1000">50% to 80%</option>
+          <option value="3000">>80%</option>
+        </select>
+      </li>
+      <li><label>Windshield :</label>
+        <select id="wind">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="8000">Front</option>
+          <option value="5000">Rear</option>
+        </select>
+      </li>
+      <li><label>Mirrors/Lights :</label>
+        <select id="ml">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="1000">Mirror</option>
+          <option value="1000">Light</option>
+        </select>
+      </li>
+      <li><label>Engine :</label>
+        <select id="engine">
+          <option selected value="0">select percentage</option>
+          <option>NIL</option>
+          <option value="1000">10% to 20%</option>
+          <option value="5000">20% to 50%</option>
+          <option value="10000">50% to 80%</option>
+          <option value="20000">>80%</option>
+        </select>
+      </li>
+      </ul>
+      <hr>
+      <p class="total">Total:</p>
+      <div class="central">
+      <button onclick="window.location.href='CarInsuranceCalculator.html'" style="background: salmon;">Clear</button>
+      <button onclick="window.location.href='../index.html'" class="transfer">Done</button>
+    </div>
+  </div>
+ </body>
+ </html> 

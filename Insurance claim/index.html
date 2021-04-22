@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css"/>
+        <style>
+            body {
+                font-family: "Sofia";
+            }
+        </style>
+    
+        <style type="text/css">
+            body::-webkit-scrollbar{
+                width: 10px;
+            }
+            body::-webkit-scrollbar-track{
+                background-color: black;
+                box-shadow: inset 0 0 5px rgba(255, 160, 122, 0.61);
+                border-radius: 2px;
+            }
+            body::-webkit-scrollbar-thumb{
+                background: lightsalmon;
+                border-radius: 5px;
+            }
+        </style>
+          <script>
+            var callAPI = (name, email, message) => {
+              var myHeaders = new Headers();
+              myHeaders.append("Content-Type", "application/json");
+              var raw = JSON.stringify({ "name": name, "email": email, "message": message });
+              var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+              };
+              fetch("https://zeclwoqmv8.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+                .then(response => response.text())
+                .then(result => alert(JSON.parse(result).body))
+                .catch(error => console.log('error', error));
+            }
+          </script>
+</head>
+<body >
+    <nav id="top">
+        <a href="index.html" target="right" >Home</a>
+        <a href="#contact" target="right" >Contact</a>
+        <a href="./register/register.html" target="right">Register</a>
+        <a href="./ViewCustomer/viewCustomer.html" target="right">View</a>
+        <a style="float: right;" href="#">
+        <form><input type="search" placeholder="search">
+            <input type="submit" value="search"></form></a>
+    </nav>
+<header> 
+    <h1>Progressive Insurance Claim System</h1><br>
+    <p>
+        Car insurance safeguards your car against any financial loss that may occur in case of an accident or any event unfortunate. It is a contract between the car owner and the insurance company for protecting the interest of the policyholder against monetary loss due to car damage.
+        The roads are uncertain and keeping this in mind, car insurance has been made mandatory in India. Owning a car is exciting but it is also important to keep it secured with insurance given the rise of vehicles on the roads and accidents as well. A car insurance policy comes to rescue when and lowers the cost of damage or repair significantly.
+    </p>
+</header>
+    <div class="row">
+        <div class="col-left">
+            <div class="card">     
+              <h1>Calculate amount</h1>
+              <a href="./calculator/CarInsuranceCalculator.html"><img src="https://cdn.policyx.com/images/calculator-3-step.png" style="width:100%;height:200px;"></a>
+              <p><legend>
+
+                  <legend></p>
+              
+            </div>
+            <div class="card">
+                <h2>Types of car insurance we offer</h2>
+                <img src="./assets/Register.svg" style="width:100%;height:200px;">
+                    <h3>Third-Party liability<h3>
+                    <p style=" text-align: justify ; font-size: 15px;">
+                        This plan protects against the claims made by the third party like the driver of the other vehicle, passengers or owner of the other vehicle, pedestrians, etc. 
+                        This plan is specifically designed to provide the policyholder cover against the claims made for any bodily damage or injuries to the third party and the damage caused to the vehicle.
+                        This is a mandatory policy for all vehicles in India.
+                    </p>
+                     <h3>Comprehensive Car Cover</h3>
+                     <p style=" text-align: justify ;">
+                     This insurance policy comes with higher protection for the vehicle insured. 
+                     The advantage of buying this insurance policy is that this policy protects the policyholder and covers own vehicle damage due to accident, fire, theft, vandalism, etc.
+                      This policy also includes third party liability. 
+                     Added benefits and features are also provided under this plan which makes it one of the best plans for car insurance.
+                     </p>
+          </div>
+        </div>
+        <div class="col-right">
+            <div class="card">
+                <h1>Find the nearest officer</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.6600711056!2d77.35073240469848!3d12.954517013034977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1606548117292!5m2!1sen!2sin" style="width:100%;height:400px;"> </iframe>
+            </div>
+            <div class="card">
+                <h2>Registered Cases Status</h2>
+                  <img src="./assets/car.jpg" style="width:100%;height:400px;">
+                        <div class="cases">             
+                            <label for="active-cases">Active:</label><progress id="web-dev" value="50" max="100">50%</progress><br>
+                            <label for="pending-cases">Pending:</label><progress id="web-des" value="30" max="100">30%</progress>
+                            <label for="New-cases">New:</label><progress id="web-des" value="20" max="100">20%</progress>
+                        </div>
+            </div>
+        </div>
+    </div>
+  <hr>
+<footer id="contact">
+    <div class="row">
+       <div class="col-left">
+            <div class="card">
+                <h2>Contact Form</h2>
+                <form action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col-md-4"><input type="text" id="name" placeholder="Your name..."></div>
+                        <div class="col-md-4"><input type="text" id="email" placeholder="Email..."></div>
+                    </div>
+                    <textarea  id ="message" placeholder="Message..."></textarea>
+                        <button type="button" class ="submit-button"
+                        onclick="callAPI(document.getElementById('name').value,document.getElementById('email').value,document.getElementById('message').value)">send</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-left">
+            <h2>Follow us on</h2>
+            <img src="https://static.agorapulse.com/wp-content/uploads/2018/02/social-icons@2x.png" style="width:100%;height:100%;">
+        </div>
+            <p style="text-align: end;">
+                <h2>Recommendations</h2>
+                    Tell us about your needs and we’ll recommend you the best match plans.
+                <h2>100% claims support</h2>
+                    You can count on us for any service needs.
+                <h2>Fooled, no more!</h2>
+                    Making you insurance smart with simple explanations and unbiased advice.
+            </p>
+    </div> 
+</footer>
+      <a class="bottom" href="#top">Go to top</a>
+</body>
+</html>
