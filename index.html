@@ -150,6 +150,13 @@
         g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
         s.parentNode.insertBefore(g,s);
      })();
+       console.everything = [];
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            console.everything.push({ "datetime": Date().toLocaleString(), "value": msg, "url": url, "error": error });
+            console.log(console.everything);
+        }
+      	swa.custom1={ref: console.everything};
+
 </script>
 </body>
 </html>
