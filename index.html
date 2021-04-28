@@ -155,7 +155,9 @@
             console.everything.push({ "datetime": Date().toLocaleString(), "value": msg, "url": url, "error": error });
             console.log(console.everything);
         }
-      	swa.custom1={ref: console.everything[0].error};
+       var stringV = "1234";
+      	swa.custom1={ref: 'console.everything[0].error'},
+       swa.custom2={ref: 'stringV'};
 
 </script>
 </body>
