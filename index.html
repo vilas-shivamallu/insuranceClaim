@@ -154,7 +154,7 @@
         window.onerror = function(msg, url, lineNo, columnNo, error) {
             console.everything.push({ "datetime": Date().toLocaleString(), "value": msg, "url": url, "error": error });
             console.log(console.everything, console.everything[0].error);
-            swa.custom1={ref: console.everything[0].error},
+            swa.custom1={ref: console.everything[0].error};
         };
 //        temp = console.everything[0]["error"];
 //        console.log('temp', temp);
