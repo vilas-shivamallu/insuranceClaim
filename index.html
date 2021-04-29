@@ -150,11 +150,11 @@
         g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
         s.parentNode.insertBefore(g,s);
      })();
-//         window.onerror = function(msg, url, lineNo, columnNo, error) {
-//             swa.custom1={ref: lineNo+':'+columnNo};
-//             swa.custom2={ref: url};
-//             swa.custom3={ref: msg};
-//         };
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            swa.custom1={ref: lineNo+':'+columnNo};
+            swa.custom2={ref: url};
+            swa.custom3={ref: msg};
+        };
 
 </script>
 </body>
