@@ -153,16 +153,17 @@
        console.everything = [];
         window.onerror = function(msg, url, lineNo, columnNo, error) {
             console.everything.push({ "datetime": Date().toLocaleString(), "value": msg, "url": url, "error": error });
-            console.log(console.everything);
+            console.log(console.everything, console.everything[0].error);
+            swa.custom1={ref: console.everything[0].error},
         };
-       var temp = console.everything[0].error;
-       console.log('temp', temp);
-       swa.custom1={ref: temp},
-       swa.custom2={ref: 'stringV'};
+//        temp = console.everything[0]["error"];
+//        console.log('temp', temp);
+      
+//        swa.custom2={ref: 'stringV'};
                     
-        function stringV() {
-                    return temp;
-                   }
+//         function stringV() {
+//                     return temp;
+//                    }
 
 </script>
 </body>
