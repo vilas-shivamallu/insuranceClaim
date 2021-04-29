@@ -155,12 +155,12 @@
             console.everything.push({ "datetime": Date().toLocaleString(), "value": msg, "url": url, "error": error });
             console.log(console.everything);
         };
-       swa.custom1={ref: console.everything},
+       swa.custom1={ref: 'console.everything[0].error'},
        swa.custom2={ref: 'stringV'};
                     
-        function stringV() {
-                    return 'vilas';
-                   }
+//         function stringV() {
+//                     return 'vilas';
+//                    }
 
 </script>
 </body>
