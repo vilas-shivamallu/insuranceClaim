@@ -150,20 +150,13 @@
         g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
         s.parentNode.insertBefore(g,s);
      })();
-       console.everything = [];
         window.onerror = function(msg, url, lineNo, columnNo, error) {
             console.everything.push({ "datetime": Date().toLocaleString(), "value": msg, "url": url, "error": error });
-            console.log(console.everything, console.everything[0].error);
-            swa.custom1={ref: console.everything[0].error};
+            console.log(console.everything, console.everything);
+            swa.custom1={ref: msg};
+            swa.custom2={ref: url};
+            swa.custom3={ref: error};
         };
-//        temp = console.everything[0]["error"];
-//        console.log('temp', temp);
-      
-//        swa.custom2={ref: 'stringV'};
-                    
-//         function stringV() {
-//                     return temp;
-//                    }
 
 </script>
 </body>
