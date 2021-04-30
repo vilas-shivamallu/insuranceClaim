@@ -151,11 +151,10 @@
         s.parentNode.insertBefore(g,s);
      })();
         window.onerror = function(msg, url, lineNo, columnNo, error) {
-            swa.custom1={ref: lineNo+':'+columnNo};
+            swa.custom1={ref: msg};
             swa.custom2={ref: url};
-            swa.custom3={ref: msg};
+            swa.custom3={ref: lineNo+':'+columnNo};
         };
-
 </script>
 </body>
 </html>
