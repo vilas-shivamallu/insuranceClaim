@@ -162,6 +162,9 @@
         window.onerror = function(msg, url, lineNo, columnNo, error) {
             if (swa.custom1 && url + lineNo+':'+columnNo == swa.custom2.ref && msg == swa.custom1.ref) {
                 console.log("Didn't UPDATE SWA", swa.custom3);
+                swa.custom1={ref: null};
+                swa.custom2={ref: null};
+                swa.custom3={ref: null};
                 return;
             } else {
                 swa.custom1={ref: msg};
