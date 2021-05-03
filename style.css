@@ -10,6 +10,7 @@ nav{
     background-color:rgba(15, 27, 14, 0.753);
     height: 100%;
     overflow: hidden;
+    border-radius: .5rem;
 
 }
 
@@ -19,6 +20,7 @@ nav a {
     text-align: center;
     color: white;
     float: left;
+    border-radius: .5rem;
 
 }
 nav a:hover{
@@ -26,19 +28,20 @@ nav a:hover{
 
 }
 header{
-    background: #141b22b7;
-        margin : 10px 0px 10px 0px;
+    background: #331408;;
+    margin : 10px 0px 10px 0px;
     padding: 30px;
     text-align: center;
+    border-radius: .5rem;
 }
 .card{
-    background-color: rgba(27, 27, 50, 0.8);
-    margin: 10px;
+    background-color: #331408;;
+    margin: 5px;
     padding: 10px;
+    border-radius: .5rem;
 }
 .card:hover{
-    
-    box-shadow: 0px 5px 5px 0px gray;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0), 0px 5px 5px rgb(0, 0, 0);
     border: solid salmon;
 }
 .row:after{
@@ -62,9 +65,10 @@ header{
   }
 
 footer{
-    background: linear-gradient(90deg, #d6883f 0%,#b3462b 100%);
+    background: #00000075;
     margin : 10px 0px 10px 0px;
     padding: 30px;
+    border-radius: .5rem;
     text-align: center;
 }
 @media screen and (max-width: 600px){
@@ -100,7 +104,8 @@ cases{
     padding : 14px 10px;
     text-align: center;
     color: white;
-     background-color:rgba(15, 27, 14, 0.753);
+    background-color:rgba(15, 27, 14, 0.753);
+    border-radius: .5rem;
          
 }
 
