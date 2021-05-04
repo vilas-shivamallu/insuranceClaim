@@ -158,33 +158,33 @@
         g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
         s.parentNode.insertBefore(g,s);
      })();
-    //  errorObj = {};
-    // window.onerror = function(msg, url, lineNo, columnNo, error) {
-    //     errorObj = {
-    //         'msg': msg,
-    //         'url': url,
-    //         'lineNo': lineNo,
-    //         'columnNo': columnNo
-    //     };
-    //     swa.custom1 = {ref: msg};
-    //     swa.custom2 = {ref: url + lineNo + ':' + columnNo};
-    //     swa.custom3 = {ref: "JavaScript Errors"};
-    //     console.log("UPDATED SWA", swa.custom2.ref, errorObj);
-    // };
+     errorObj = {};
+    window.onerror = function(msg, url, lineNo, columnNo, error) {
+        errorObj = {
+            'msg': msg,
+            'url': url,
+            'lineNo': lineNo,
+            'columnNo': columnNo
+        };
+        swa.custom1 = {ref: msg};
+        swa.custom2 = {ref: url + lineNo + ':' + columnNo};
+        swa.custom3 = {ref: "JavaScript Errors"};
+        console.log("UPDATED SWA", swa.custom2.ref, errorObj);
+    };
 
-    // window.onload = function() {
-    //     console.log("ErrorObj on Load", errorObj, swa.custom1);
-    // }
-    // window.onclick = function() {
-    //     console.log("ErrorObj", errorObj, swa.custom1);
-    //     if (swa.custom1 && errorObj.url + errorObj.lineNo+':'+errorObj.columnNo == swa.custom2.ref && errorObj.msg == swa.custom1.ref) {
-    //         console.log("Didn't UPDATE SWA", swa.custom3);
-    //         swa.custom1 = undefined;
-    //         swa.custom2 = undefined;
-    //         swa.custom3 = undefined;
-    //     }
-    //     console.log("After Click", errorObj, swa.custom1);
-    // };
+    window.onload = function() {
+        console.log("ErrorObj on Load", errorObj, swa.custom1);
+    }
+    window.onclick = function() {
+        console.log("ErrorObj", errorObj, swa.custom1);
+        if (swa.custom1 && errorObj.url + errorObj.lineNo+':'+errorObj.columnNo == swa.custom2.ref && errorObj.msg == swa.custom1.ref) {
+            console.log("Didn't UPDATE SWA", swa.custom3);
+            swa.custom1 = undefined;
+            swa.custom2 = undefined;
+            swa.custom3 = undefined;
+        }
+        console.log("After Click", errorObj, swa.custom1);
+    };
 </script>
 </body>
 </html>
