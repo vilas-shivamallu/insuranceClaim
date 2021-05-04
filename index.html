@@ -166,7 +166,7 @@
             'lineNo': lineNo,
             'columnNo': columnNo
         };
-        swa.custom1 = {ref: msg};
+        swa.custom11112 = {ref: msg};
         swa.custom2 = {ref: url + lineNo + ':' + columnNo};
         swa.custom3 = {ref: "JavaScript Errors"};
         console.log("UPDATED SWA", swa.custom2.ref, errorObj);
@@ -179,7 +179,7 @@
         console.log("ErrorObj", errorObj, swa.custom1);
         if (swa.custom1 && errorObj.url + errorObj.lineNo+':'+errorObj.columnNo == swa.custom2.ref && errorObj.msg == swa.custom1.ref) {
             console.log("Didn't UPDATE SWA", swa.custom3);
-            swa.custom1 = undefined;
+            swa.custom111 = undefined;
             swa.custom2 = undefined;
             swa.custom3 = undefined;
         }
