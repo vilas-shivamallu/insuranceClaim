@@ -4,7 +4,7 @@ html {
   body{
       /* background:  linear-gradient(90deg, #eb3349 0%, #F45C43 50%, rgba(252,176,69,1) 100%); */
       background-image: url('../assets/background.png');
-      background-size: cover;
+      background-size: auto;
       color: rgb(255, 250, 250);
       font-family: "Sofia";
   }
@@ -24,9 +24,8 @@ html {
       margin: 20px auto;
       width: 430px;
       background: #0000008e;
-      padding: 50px;
-      position: relative;
       border-radius: 8px;
+      border: 0.1px solid rgba(245, 245, 245, 0.233);
   }
   
   input {

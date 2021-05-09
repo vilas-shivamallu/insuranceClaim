@@ -84,6 +84,7 @@ button {
   background: #0000008e;
   padding: 2.5rem 0.625rem;
   border-radius: 0.5rem;
+  border: 0.1px solid rgba(245, 245, 245, 0.233);
 }
 
 @media (min-width: 576px) {
@@ -101,6 +102,8 @@ button {
 .header {
   padding: 0 0.625rem;
   margin-bottom: 1.875rem;
+  border: 0.1px solid rgba(245, 245, 245, 0.233);
+  border-radius: .5rem;
 }
 
 .description {
@@ -123,6 +126,7 @@ button {
 
 form {
   background: #0000008e;
+  border: 0.1px solid rgba(245, 245, 245, 0.233);
   padding: 2.5rem 0.625rem;
   border-radius: 0.5rem;
 }
