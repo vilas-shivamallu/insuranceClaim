@@ -2,12 +2,29 @@ html {
   scroll-behavior: smooth;
 }
 body{
-    background:  linear-gradient(90deg, #eb3349 0%, #F45C43 50%, rgba(252,176,69,1) 100%);
+    /* background:  linear-gradient(90deg, #eb3348d7 0%, #F45C43 50%, rgb(248, 167, 54) 100%); */
+    background-image: url('./assets/background.png');
+    background-size: cover;
     color: rgb(255, 250, 250);
+    font-family: "Sofia";
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: black;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.61);
+    border-radius: 2px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(56, 63, 65);
+    border-radius: 5px;
 }
 nav{
   
-    background-color:rgba(15, 27, 14, 0.753);
+    /* background-color:rgba(15, 27, 14, 0.753); */
+    background: #00000067;
     height: 100%;
     overflow: hidden;
     border-radius: .5rem;
@@ -21,29 +38,34 @@ nav a {
     color: white;
     float: left;
     border-radius: .5rem;
+    text-decoration: none;
 
 }
 nav a:hover{
-    background-color: black;
+    background-color: snow;
+    color: black;
 
 }
 header{
-    background: #331408;;
+    /* background: #331408; */
+    background: #00000075;
     margin : 10px 0px 10px 0px;
     padding: 30px;
     text-align: center;
     border-radius: .5rem;
 }
 .card{
-    background-color: #331408;;
-    margin: 5px;
+    /* background-color: #331408; */
+    background: #00000075;
+    margin: 20px;
     padding: 10px;
     border-radius: .5rem;
+    border: 0.25px dotted whitesmoke;
 }
-.card:hover{
-    box-shadow: 0px 5px 5px rgb(0, 0, 0), 0px 5px 5px rgb(0, 0, 0);
-    border: solid salmon;
-}
+/* .card:hover{
+    box-shadow: 0px 5px 5px rgb(0, 0, 0), 0px 5px 5px rgb(0, 0, 0); 
+    border: solid salmon; 
+} */
 .row:after{
     content:"";
     display: table;
@@ -83,9 +105,6 @@ footer{
         width: 100%;
     }
 }
-cases{
-  display:table;
-}
 .cases label{
   margin-left: 30px;
   font-size: 20px;
@@ -104,15 +123,23 @@ cases{
     padding : 14px 10px;
     text-align: center;
     color: white;
-    background-color:rgba(15, 27, 14, 0.753);
+    /* background-color:rgba(15, 27, 14, 0.753); */
+    background: #00000075;
+    text-decoration: none;
     border-radius: .5rem;
          
+}
+
+.bottom:hover {
+    background-color: snow;
+    color: black;
 }
 
 .contact-form input:not([type="submit"]), .contact-form textarea {
   width: 100%;
   margin-bottom: 10px;
-  border: 1px dashed black;
+  border-radius: .5rem;
+  min-height: 1.25rem;
  }
 .contact-form textarea {
  
@@ -123,8 +150,12 @@ cases{
     display: block;
     width: 100%;
     padding: 0.75rem;
-    background: lightgreen;
-    color: black;
-    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: .5rem;
     cursor: pointer;
+  }
+
+  p {
+      font-size: 16px;
   }

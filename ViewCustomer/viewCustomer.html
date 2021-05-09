@@ -30,7 +30,7 @@
                   var myObj = JSON.parse(JSON.parse(result).body);
                   var x;
                   for (x in myObj) {
-                  document.getElementById("data").innerHTML += x + ' - ' + myObj[x] + "<br>";
+                    document.getElementById("data").innerHTML += "<p>"+x+ ' - ' + " "+myObj[x] + "</p><br>";
                   }
                 })
                   .catch(error => console.log('error', error));
@@ -40,13 +40,16 @@
           </script>
     </head>
     <body>
-      <p onclick="window.location.href='../index.html'" style="cursor: pointer;"><img src="../assets/left-arrow.svg" style="width:4%;height:4%;"></p> 
+      <p onclick="window.location.href='../index.html'" style="cursor: pointer; position: relative;">
+        <span style="width:50px;height:50px; font-size: 50px;"> &#8249;</span></p> 
       <div class="container">
-        <h1>Check the customer details</h1>
-        <label >Enter Your Mobile Number: </label>
-        <input type="text" id="mobileNumber" class="form-control" placeholder="Mobile Number" required />
-        <button type="button" class ="submit-button"
-                        onclick="callAPI(document.getElementById('mobileNumber').value)">search</button>
-        <div id="data" style="border: 2px dashed white; padding: 8px; margin: 10px;"></div>
+        <h1 style="margin: 20px;">Check the customer details</h1>
+        <span >Enter Your Mobile Number: </span>
+        <span >
+          <input type="text" id="mobileNumber" class="form-control" placeholder="Mobile Number" required/>
+          <button type="submit" class ="submit-button" onclick="callAPI(document.getElementById('mobileNumber').value)">search</button>
+        </span>
+        <div id="data" style="background: #0000008e; padding: 8px; margin: 20px; border-radius: 8px;"></div>
+
         </div>
     </body>
