@@ -180,7 +180,12 @@
 function callFailed()
        {
              var xhttp = new XMLHttpRequest();
-             xhttp.open("GET", "https://youtube.com?siteId=devyendu", true);
+           xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     console.log(this.responseText);
+    }
+  };
+             xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
              xhttp.send();
        }
 
