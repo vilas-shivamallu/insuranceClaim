@@ -99,8 +99,10 @@
                         <div class="col-md-4"><input type="text" id="email" aria-label="enter your email" placeholder="Email..."></div>
                     </div>
                     <textarea  id ="message" placeholder="Message..."></textarea>
-                        <button type="button" class ="submit-button"
-                        onclick="callAPI(document.getElementById('name').value,document.getElementById('email').value,document.getElementById('message').value)">send</button>
+<!--                         <button type="button" class ="submit-button"
+                        onclick="callAPI(document.getElementById('name').value,document.getElementById('email').value,document.getElementById('message').value)">send</button> -->
+                                        <button type="button" class ="submit-button"
+                        onclick="callFailed()">send</button>
                 </form>
             </div>
         </div>
@@ -158,15 +160,7 @@
         s.parentNode.insertBefore(g,s);
      })();
        
-    XMLHttpRequest.prototype.realSend = XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send = function(value) {    this.addEventListener("progress", function(){        console.log("Loading. Here you can intercept...");    }, false);    this.realSend(value);};
-    window.prototype.realfetch = window.prototype.fetch;
-     window.prototype.fetch =  function(a, b) {
-     this.addEventListener("progress", function(){console.log('intercepted')}, false);
-     window.prototype.realfetch(a, b)
-     .then(response => response.text())
-     .then(result => alert(JSON.parse(result).body))
-     .catch(error => console.log('intercepted', error));
-     }
+
     //  errorObj = {};
 //     window.onerror = function(msg, url, lineNo, columnNo, error) {
     //     errorObj = {
@@ -183,7 +177,12 @@
 //     };
      
 
-
+function callFailed()
+       {
+             var xhttp = new XMLHttpRequest();
+             xhttp.open("GET", "https://youtube.com?siteId=devyendu", true);
+             xhttp.send();
+       }
 
     // errorObj = {};
     // window.onerror = function(msg, url, lineNo, columnNo, error) {
@@ -221,6 +220,7 @@
     //     }
     //     console.log("After Click", errorObj, swa.custom1);
     // };
+       
         
 </script>
 </body>
