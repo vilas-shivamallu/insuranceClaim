@@ -157,6 +157,8 @@
         g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
         s.parentNode.insertBefore(g,s);
      })();
+       
+    XMLHttpRequest.prototype.realSend = XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send = function(value) {    this.addEventListener("progress", function(){        console.log("Loading. Here you can intercept...");    }, false);    this.realSend(value);};
             
     //  errorObj = {};
 //     window.onerror = function(msg, url, lineNo, columnNo, error) {
