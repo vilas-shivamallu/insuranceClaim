@@ -102,7 +102,11 @@
 <!--                         <button type="button" class ="submit-button"
                         onclick="callAPI(document.getElementById('name').value,document.getElementById('email').value,document.getElementById('message').value)">send</button> -->
                                         <button type="button" class ="submit-button"
-                        onclick="callFailed()">send</button>
+
+                        onclick="callFailed()">Fail API Call</button>
+                        <button type="button" class ="submit-button"
+                        onclick="callSuccess()">Success API Call</button>
+
                 </form>
             </div>
         </div>
@@ -177,7 +181,8 @@
 //     };
      
 
-function callFailed()
+
+function callSuccess()
        {
              var xhttp = new XMLHttpRequest();
            xhttp.onreadystatechange = function() {
@@ -186,6 +191,19 @@ function callFailed()
     }
   };
              xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+             xhttp.send();
+       }
+
+
+function callFailed()
+       {
+             var xhttp = new XMLHttpRequest();
+           xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     console.log(this.responseText);
+    }
+  };
+             xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/abcd", true);
              xhttp.send();
        }
 
