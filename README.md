@@ -1,10 +1,8 @@
-# https://vilas-shivamallu.github.io/insuranceClaim/
-
-# Progressive Insurance – Claim system 
-
-(slightly modified from the original) 
-
+## [Progressive Insurance – Claim system](https://vilas-shivamallu.github.io/insuranceClaim/)
  
+![vilas-shivamallu github io_insuranceClaim_](https://user-images.githubusercontent.com/42311627/176755242-e7181a56-3d79-4d98-a2fd-236768bd903e.png)
+
+
 
 In order to increase customer satisfaction, Progressive Auto Insurance Company simplified its car insurance claim process significantly, by doing 3 things: 
 
@@ -18,7 +16,7 @@ By deploying a system which can be accessed via smart phone app.
 
  
 
-The process is as follows:  
+## The process is as follows:  
 
  
 
